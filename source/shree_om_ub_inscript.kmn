@@ -1,0 +1,400 @@
+﻿c SHREE OM (UB) INSCRIPT Keyboard
+c Copyright (C) 2026 Umesh Kumar Bedi
+c
+c This program is free software: you can redistribute it and/or modify
+c it under the terms of the GNU General Public License as published by
+c the Free Software Foundation, either version 3 of the License, or
+c (at your option) any later version.
+
+
+store(&Version) "9.0"
+store(&NAME) 'SHREE OM (UB) INSCRIPT'
+store(&BITMAP) 'shree_om_ub_inscript.ico'
+store(&COPYRIGHT) 'Copyright © Umesh Kumar Bedi'
+store(&KEYBOARDVERSION) '1.1'
+store(&TARGETS) 'windows macosx linux'
+
+c Define Matra stores 
+store(ardh_matra_D) "IJKMOPVWYZUn~^_`bdgefhjÌl"  c खगघचजझतथधनणपबभमयलवसशषहक्षत्रश्र for ardh matra 
+store(ardh_matra_outs) "»½¿ÀÁÂËÏÜÝÊßãäåæëìñíîôúÍû"  c Corresponding outputs
+
+store(r_ardh_matra) "IPnXgh" c खझपदसह
+store(r_ardh_outs) "¼ÃàÐòõ" c प्रद्रस्रह्र
+
+begin Unicode > use(main)
+
+group(main) using keys
+
+
+c -----------------------------
+c 1. Defining combinational rules for ardh matra
+any(ardh_matra_D) + [K_D] > index(ardh_matra_outs, 1)
+
+any(r_ardh_matra) + [SHIFT K_3] > index(r_ardh_outs, 1)
+
+
+c -------------------
+c for क ardh matra
+"H$" + [K_D] > "Š"
+c for कु matra
+"H$" + [K_G] > "Hw$"
+c for कू matra
+"H$" + [K_T] > "Hy$"
+c for के matra
+"H$" + [K_S] > "Ho$"
+c for कै matra
+"H$" + [K_W] > "H¡$"
+c for की matra
+"H$" + [K_R] > "H$s"
+c for कृ matra
+"H$" + [K_EQUAL] > "H¥$"
+c for क्र matra
+"H$" + [SHIFT K_3] > "H«$"
+c for र्क matra
+"H$" + [SHIFT K_4] > "H©$"
+c -------------------
+
+
+c -------------------
+c for फ ardh matra 
+"\$" + [K_D] > "â"
+c for फु matra
+"\$" + [K_G] > "\w$"
+c for फू matra
+"\$" + [K_T] > "\y$"
+c for फे matra
+"\$" + [K_S] > "\o$"
+c for फै matra
+"\$" + [K_W] > "\¡$"
+c for फी matra
+"\$" + [K_R] > "\$s"
+c for फृ matra
+"\$" + [K_EQUAL] > "\¥$"
+c for फ्र matra
+"\$" + [SHIFT K_3] > "\«$"
+c for र्फ matra
+"\$" + [SHIFT K_4] > "\©$"
+c -------------------
+
+c ङ आर्ध मात्रा-------------------
+'L>²' + [K_K] > '‘'
+'L>²' + [SHIFT K_K] > '’'
+'L>²' + [K_I] > '“'
+'L>²' + [SHIFT K_I] > '”'
+'L>²' + [K_C] > '¶'
+'L>²' + [SHIFT K_7] > '¬'
+c -------------------
+
+c द अर्ध मात्रा
+'X²' + [K_EQUAL] > 'Ñ'
+'X²' + [SHIFT K_I] > 'Ó'
+'X²' + [K_O] > 'Ô'
+'X²' + [SHIFT K_O] > 'Õ'
+'X²' + [K_C] > 'Ù'
+'X²' + [K_SLASH] > 'Ú'
+'X²' + [K_B] > 'Û'
+
+
+c टठड आर्ध मात्रा ड-------------------
+'Q>²' + [K_QUOTE] > 'Å>'
+'Q>²' + [SHIFT K_QUOTE] > 'Æ>'
+
+'R>²' + [SHIFT K_QUOTE] > 'Ç>'
+'S>²' + [K_LBRKT] > 'È>'
+'T>²' + [SHIFT K_LBRKT] > 'É>'
+'S>²' + [SHIFT K_LBRKT] > '–>'
+
+c टठडढ र् के साथ उ औ ऊ के साथ
+"Q>" + [SHIFT K_3] > "Q—>"
+"R>" + [SHIFT K_3] > "R—>"
+"S>" + [SHIFT K_3] > "S—>"
+"T>" + [SHIFT K_3] > "T—>"
+
+c टठडढ र् के साथ + उ औ ऊ 
+c उ
+"Q—>" + [K_G] > 'Q®>'
+"R—>" + [K_G] > "R®>"
+"S—>" + [K_G] > "S®>"
+"T—>" + [K_G] > "T®>"
+c ऊ
+"Q—>" + [K_T] > 'Q¯>'
+"R—>" + [K_T] > "R¯>"
+"S—>" + [K_T] > "S¯>"
+"T—>" + [K_T] > "T¯>"
+c ----------------------
+
+c ह्य ह्म ह्व ह्ल ह्न के लिए------------
+'ô' + [K_SLASH] > 'ø'
+'ô' + [K_C] > '÷'
+'ô' + [K_B] > 'ˆ'
+'ô' + [K_N] > '‡'
+'ô' + [K_V] > '•'
+
+c रु ओर रू----------------
+'a' + [K_G] > 'é'
+'a' + [K_T] > 'ê$'
+
+c for ञ ardh matra
+"Äm" + [K_D] > "Ä"
+
+c for स्त्र ardh matra
+"ñ" + [SHIFT K_6] > "ó"
+
+c for हृ matra
+'h' + [K_EQUAL] > 'ö'
+
+c for त्त
+'Ë' + [K_L] > 'Îm'
+'Îm' + [K_D] > 'Î'
+
+
+c special matras
+'r' + [SHIFT K_4] > 'u'
+'o' + [SHIFT K_4] > '}' c र्े
+'¡' + [SHIFT K_4] > '£'
+'o' + [K_X] > '|' c (ेें) 
+'r' + [K_X] > 't'
+'{' + [K_X] > 'q'
+'¡' + [K_X] > '¢'
+'£' + [K_X] > '¤'
+'}' + [K_X] > ']'
+'u' + [K_X] > 'v'
+'©' + [K_X] > 'ª'
+
+c -----------------------------
+c 2. Defining individual keys
+
+c + [K_SPACE] > U+0020
+c + [CTRL K_SPACE] > U+0020
+
+c 0 Key
+c + [SHIFT K_0] > U+0029
+c + [RALT K_0] > U+0966
+
+c 1 Key
+c + [K_1] > U+0031
++ [SHIFT K_1] > U+0021 c '°'
+c + [SHIFT CTRL K_1] > U+200d
+c + [RALT K_1] > U+0021
+
+c 2 Key
+c + [K_2] > U+0032
++ [SHIFT K_2] > u+00b0 c U+0945 (ॅ)
+c + [SHIFT CTRL K_2] > U+200c
++ [RALT K_2] > U+0040
+
+c key 3
+c + [K_3] > U+0033
++ [SHIFT K_3] > u+00ab c U+094d U+0930 (्र)
+c + [RALT K_3] > U+0023
+
+c key 4
+c + [K_4] > U+0034
++ [SHIFT K_4] > u+00a9 c U+0930 U+094d (र्)
++ [RALT K_4] > U+20b9
+c + [RALT K_4] > U+0024
+
+c key 5
+c + [K_5] > U+0035
++ [SHIFT K_5] > 'k' c U+091c U+094d U+091e (ज्ञ)
++ [RALT K_5] > U+0025
+
+c key 6
+c + [K_6] > U+0036
++ [SHIFT K_6] > 'Ì' c U+0924 U+094d U+0930 (त्र)
++ [RALT K_6] > U+005e
+
+c key 7
+c + [K_7] > U+0037
++ [SHIFT K_7] > 'j' c U+0915 U+094d U+0937 (क्ष)
++ [RALT K_7] > U+0026
+
+c key 8
+c + [K_8] > U+0038
++ [SHIFT K_8] > 'l' c U+0936 U+094d U+0930
++ [RALT K_8] > U+002a
+
+c key 9
+c + [K_9] > U+0039
+c + [SHIFT K_9] > U+0028
+c + [RALT K_9] > U+096f
+
+c key A
++ [K_A] > 'mo' c U+094b (ो)
++ [SHIFT K_A] > 'Amo' c U+0913 (ओ)
++ [RALT K_A] > '›'
++ [SHIFT RALT K_A] > '*'
+
+c key B
++ [K_B] > 'd' c U+0935 (व)
+c + [SHIFT K_B] > U+0934
+
+c key C
++ [K_C] > U+005f c U+092e (म)
++ [SHIFT K_C] > U+0055 c U+0923 (ण)
+c + [RALT K_C] > U+0954
+
++ [K_D] > U+00b2 c U+094d (्)
++ [SHIFT K_D] > U+0041 c U+0905 (अ)
++ [RALT K_D] > U+00b2 c U+094d (्)
+
+c key E
++ [K_E] > U+006d c U+093e (ा)
++ [SHIFT K_E] > U+0041 U+006d  c U+0906 (आ)
+c + [SHIFT RALT K_E] > U+0951 ॑ (म॑)
+
+c key F
++ [K_F] > U+007B c U+093f (ि)
++ [SHIFT K_F] > U+0042 c U+0907 (इ)
+c + [RALT K_F] > U+0962 (ॢ)
+c + [SHIFT RALT K_F] > U+090c (ऌ)
+
+c key G
++ [K_G] > u+0077 c U+0941 (ु)
++ [SHIFT K_G] > u+0043 c U+0909 (उ)
+
+c key H
++ [K_H] > u+006e c U+092a (प)
++ [SHIFT K_H] > u+005c U+0024 c U+092b (फ)
+c + [SHIFT RALT K_H] > 'µ\$' c U+095e (फ़)
+
+c key I
++ [K_I] > u+004a c U+0917 (ग)
++ [SHIFT K_I] > u+004b c U+0918 (घ)
+c + [RALT K_I] > u+00b5 c U+095a (ग़)
+
+c key J
++ [K_J] > u+0061 c U+0930 (र)
++ [SHIFT K_J] > '‹S>' c U+0931 (ऱ)
++ [RALT K_J] > u+00e8 c U+0931 (ऱ)
+
+c key K
++ [K_K] > u+0048 u+0024 c U+0915 (क) $
++ [SHIFT K_K] > u+0049 c U+0916 (ख)
+c + [RALT K_K] > U+0958
+c + [SHIFT RALT K_K] > U+0959
+
+c key L
++ [K_L] > u+0056 c U+0924 (त)
++ [SHIFT K_L] > u+0057 c U+0925 (थ)
+
+c key M
++ [K_M] > u+0067 c U+0938 (स)
++ [SHIFT K_M] > u+0065 c U+0936 (श)
+
+c key N
++ [K_N] > u+0062 c U+0932 (ल)
++ [SHIFT K_N] > u+0069 c U+0933 (ळ)
++ [RALT K_N] > u+0063 c (ल older)
+
+c key O
++ [K_O] > u+0058 c U+0926 (द)
++ [SHIFT K_O] > u+0059 c U+0927 (ध)
+
+c key P
++ [K_P] > u+004f c U+091c (ज)
++ [SHIFT K_P] > u+0050 c U+091d (झ)
+c + [RALT K_P] > U+095b
+
+c key Q
++ [K_Q] > u+006d u+00a1 c U+094c (ौ)
++ [SHIFT K_Q] > u+0041 u+006d u+00a1 c U+0914 (औ)
+
+c key R
++ [K_R] > u+0072 c U+0940 (ी)
++ [SHIFT K_R] > u+0042 u+00a9 c U+0908 (ई)
+c + [RALT K_R] > U+0963
+c + [SHIFT RALT K_R] > U+0961
+
+c key S
++ [K_S] > u+006f c U+0947 (े)
++ [SHIFT K_S] > u+0045 c U+090f (ए)
++ [RALT K_S] > u+0040 c (ऽ)
+
+c key T
++ [K_T] > u+0079 c U+0942 (ू)
++ [SHIFT K_T] > u+0044 u+0024 c U+090a (ऊ) $
+
+c key U
++ [K_U] > u+0068 c U+0939 (ह) L>
++ [SHIFT K_U] > u+004c u+003e c U+0919 (ङ)
+
+c key V
++ [K_V] > u+005a c U+0928 (न)
+c + [SHIFT K_V] > U+0929 ()
+
+c key W
++ [K_W] > u+00a1 c U+0948 (ै)
++ [SHIFT K_W] > u+0045 u+00a1 c U+0910 (ऐ)
+
+c key X
++ [K_X] > u+00a7 c U+0902 (ं)
++ [SHIFT K_X] > u+00b1 c U+0901 (ँ)
++ [SHIFT RALT K_X] > u+203a c U+0950 (ॐ)
+
+c key Y
++ [K_Y] > u+007e c U+092c (ब)
++ [SHIFT K_Y] > u+005e c U+092d (भ)
+
+c key Z
+c + [K_Z] > U+0946
+c + [SHIFT K_Z] > U+090e
+c + [RALT K_Z] > U+0953
+
+c key : and ;
++ [K_COLON] > u+004d c U+091a (च)
++ [SHIFT K_COLON] > u+004e c U+091b (छ)
++ [RALT K_COLON] > u+0161 c U+0952 (च॒)
+
+c key = and +
++ [K_EQUAL] > u+00a5 c U+0943 (ृ)
++ [SHIFT K_EQUAL] > u+0046 u+0024 c U+090b (ऋ)
++ [RALT K_EQUAL] > u+00a6 c U+0944 (ॄ)
++ [SHIFT RALT K_EQUAL] > u+0047 u+0024 c U+0960 (ॠ)
+
+c key , and <
++ [K_COMMA] > U+002c
++ [SHIFT K_COMMA] > u+0066 c U+0937 (ष)
++ [RALT K_COMMA] > U+003c
+
+c key -
++ [K_HYPHEN] > U+002d
++ [SHIFT K_HYPHEN] > u+2026 c U+0903 (ः)
+
+c key . and >
++ [K_PERIOD] > U+002e
++ [SHIFT K_PERIOD] > u+0026 c U+0964 (।)
++ [RALT K_PERIOD] > U+003e
++ [SHIFT RALT K_PERIOD] > u+0040 c U+093d (ऽ)
+
+c key / forward slash
++ [K_SLASH] > u+0060 c U+092f (य)
++ [SHIFT K_SLASH] > u+003f c (?)  U+095f (य़)
++ [RALT K_SLASH] > u+002f c (/)
+
+c + [K_BKQUOTE] > U+094a
+c + [SHIFT K_BKQUOTE] > U+0912
+
+c key [ left bracket
++ [K_LBRKT] > u+0053 u+003e c U+0921 (ड)
++ [SHIFT K_LBRKT] > u+0054 u+003e c U+0922 (ढ)
++ [SHIFT RALT K_LBRKT] > u+2039 u+0053 u+003e c U+095d (ढ़) ‹T>
++ [RALT K_LBRKT] > u+2039 u+0054 u+003e c U+095c (ड़) ‹S>
+
+c key \ back slash
++ [K_BKSLASH] > u+006d u+00b0 c U+0949 (ॉ) m°
++ [SHIFT K_BKSLASH] > u+0041 u+006d u+00b0 c U+0911 (ऑ) Am°
+
+c key ] right bracket
++ [K_RBRKT] > u+2039 c U+093c (़) ‹
++ [SHIFT K_RBRKT] > u+00c4 u+006d c U+091e (ञ)
+
+c key ' and "
++ [K_QUOTE] > u+51 u+003e c U+091f (ट) Q>
++ [SHIFT K_QUOTE] > u+0052 u+003e c U+0920 (ठ)
++ [RALT K_QUOTE] > u+0022 c (open single quote) 
++ [SHIFT RALT K_QUOTE] > u+0027 c (close single quote)
+c + [SHIFT RALT K_QUOTE] > U+0951
+
++ [K_oE2] > u+006d u+00b0 c U+0949 (ॉ) m°
++ [SHIFT K_oE2] > u+0041 u+006d u+00b0 c U+0911 (ऑ) Am°
