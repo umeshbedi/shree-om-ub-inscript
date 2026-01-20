@@ -81,31 +81,12 @@ Keyman will automatically install and activate the keyboard.
 
 Below is the keyboard layout used by this keyboard (InScript standard):
 
-![Keyboard Layout](docs/keyboard-layout.png)
+### Normal Key and SHIFT + Key
+![Keyboard Layout](KB_Devanagari_InScript_text_1.svg.png)
 
-> 📌 Place the image file at:
-> `docs/keyboard-layout.png`
+### RIGHT ALT + Key and RIGHT ALT + SHIFT + Key
+![Keyboard Layout](KB_Devanagari_InScript_text_RIGHT%20ALT.png)
 
-(You can export the layout image from Keyman Developer or add a screenshot of the OSK.)
-
----
-
-## 📂 Repository Structure
-
-```text
-.
-├── source/
-│   ├── shree_om_ub_inscript.kmn
-│   ├── shree_om_ub_inscript.kvks
-│   ├── shree_om_ub_inscript.kps
-│   └── shree_om_ub_inscript.ico
-│
-├── shree_om_ub_inscript.kpj
-├── README.md
-├── LICENSE.md
-├── HISTORY.md
-└── .gitignore
-```
 
 ---
 
