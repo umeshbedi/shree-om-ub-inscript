@@ -44,7 +44,7 @@ This keyboard is intended for users who still work with legacy ShreeLipi documen
 
 ### 🔹 Download the Keyboard
 
-1. Go to this repository’s **Releases** section
+1. Go to this repository’s **[Releases](https://github.com/umeshbedi/shree-om-ub-inscript/releases)** section
 2. Download the latest `.kmx` file, for example:
 
    ```
