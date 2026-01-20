@@ -1,6 +1,7 @@
 ﻿c SHREE OM (UB) INSCRIPT Keyboard
 c Copyright (C) 2026 Umesh Kumar Bedi
 c
+c SPDX-License-Identifier: GPL-3.0-or-later
 c This program is free software: you can redistribute it and/or modify
 c it under the terms of the GNU General Public License as published by
 c the Free Software Foundation, either version 3 of the License, or
@@ -181,7 +182,7 @@ c 2 Key
 c + [K_2] > U+0032
 + [SHIFT K_2] > u+00b0 c U+0945 (ॅ)
 c + [SHIFT CTRL K_2] > U+200c
-+ [RALT K_2] > U+0040
+c + [RALT K_2] > U+0040
 
 c key 3
 c + [K_3] > U+0033
@@ -309,7 +310,7 @@ c + [SHIFT RALT K_R] > U+0961
 c key S
 + [K_S] > u+006f c U+0947 (े)
 + [SHIFT K_S] > u+0045 c U+090f (ए)
-+ [RALT K_S] > u+0040 c (ऽ)
+c + [RALT K_S] > u+0040 c (ऽ)
 
 c key T
 + [K_T] > u+0079 c U+0942 (ू)
@@ -325,7 +326,7 @@ c + [SHIFT K_V] > U+0929 ()
 
 c key W
 + [K_W] > u+00a1 c U+0948 (ै)
-+ [SHIFT K_W] > u+0045 u+00a1 c U+0910 (ऐ)
++ [SHIFT K_W] > u+0045 u+006F c U+0910 (ऐ) Eo
 
 c key X
 + [K_X] > u+00a7 c U+0902 (ं)
@@ -337,14 +338,15 @@ c key Y
 + [SHIFT K_Y] > u+005e c U+092d (भ)
 
 c key Z
-c + [K_Z] > U+0946
-c + [SHIFT K_Z] > U+090e
++ [K_Z] > U+0040 c @
++ [SHIFT K_Z] > U+2219 c ∙
 c + [RALT K_Z] > U+0953
 
 c key : and ;
 + [K_COLON] > u+004d c U+091a (च)
 + [SHIFT K_COLON] > u+004e c U+091b (छ)
-+ [RALT K_COLON] > u+0161 c U+0952 (च॒)
++ [RALT K_COLON] > u+003b c ;
++ [RALT SHIFT K_COLON] > u+003a c :
 
 c key = and +
 + [K_EQUAL] > u+00a5 c U+0943 (ृ)
