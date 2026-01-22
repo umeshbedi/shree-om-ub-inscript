@@ -2,60 +2,90 @@
 
 **SHREE OM (UB) INSCRIPT** is a free and open-source **InScript-style Hindi keyboard** designed for use with the **ShreeLipi (legacy) font**, built using **Keyman Developer**.
 
-This keyboard is intended for users who still work with legacy ShreeLipi documents and prefer the standard **InScript layout**.
+This keyboard is intended for users who still work with legacy ShreeLipi documents and prefer the standard **InScript layout** across **Windows, macOS, and Linux**.
 
 ---
 
 ## ✨ Features
 
-* InScript-style keyboard layout
-* Works with **ShreeLipi (legacy) font**
-* Supports conjuncts such as:
+* InScript-style Hindi keyboard layout
+* Compatible with **ShreeLipi (legacy) font**
+* Supports common conjuncts and matras, including:
 
   * क्र, त्र, ज्ञ, क्ष, श्र (as implemented)
 * Built using **Keyman**
-* Free and open-source (GPL-3.0)
+* Works on **Windows, macOS, and Linux**
+* Free and open-source (**GPL-3.0**)
 
 ---
 
-## 🖥 System Requirements
+## 🖥 Supported Platforms & Requirements
+
+### ✅ Supported Operating Systems
 
 * **Windows 10 / Windows 11**
+* **macOS**
+* **Linux (Ubuntu and other supported distributions)**
+
+### 📌 Requirements (All Platforms)
+
 * **Keyman Desktop** installed
 * **ShreeLipi font** installed on the system
+
+> ⚠️ This project does **not** distribute the ShreeLipi font.
 
 ---
 
 ## 📥 Step 1: Download & Install Keyman
 
-### 🔹 Download Keyman Desktop
+### 🔹 Windows / macOS / Linux
 
 1. Visit:
    👉 [https://keyman.com/desktop](https://keyman.com/desktop)
-2. Click **Download Keyman for Windows**
-3. Run the installer and complete installation
-4. After installation, you should see the **Keyman icon (⌨️)** in the system tray
+2. Download **Keyman Desktop** for your operating system
+3. Install Keyman using the standard installer for your OS
+4. After installation:
 
-> Keyman Desktop is required to run `.kmx` keyboard files.
+   * Windows: Keyman icon appears in the system tray
+   * macOS: Keyman appears in the menu bar
+   * Linux: Keyman runs as a background service
+
+> Keyman Desktop is required to run `.kmp` keyboard files on all platforms.
 
 ---
 
-## ⌨️ Step 2: Download & Install the Keyboard (.kmx)
+## ⌨️ Step 2: Download & Install the Keyboard (.kmp)
 
 ### 🔹 Download the Keyboard
 
-1. Go to this repository’s **[Releases](https://github.com/umeshbedi/shree-om-ub-inscript/releases)** section
-2. Download the latest `.kmx` file, for example:
+1. Go to the repository **Releases** page:
+   👉 [https://github.com/umeshbedi/shree-om-ub-inscript/releases](https://github.com/umeshbedi/shree-om-ub-inscript/releases)
+2. Download the latest keyboard file:
 
    ```
-   shree_om_ub_inscript.kmx
+   shree_om_ub_inscript.kmp
    ```
+
+---
 
 ### 🔹 Install the Keyboard
 
-* **Double-click** the `.kmx` file
+#### Windows
+
+* Double-click the `.kmp` file
   **OR**
 * Right-click → **Install with Keyman**
+
+#### macOS
+
+* Double-click the `.kmp` file
+* Keyman will prompt to install the keyboard
+
+#### Linux
+
+* Double-click the `.kmp` file
+  **OR**
+* Install via Keyman Configuration
 
 Keyman will automatically install and activate the keyboard.
 
@@ -63,30 +93,30 @@ Keyman will automatically install and activate the keyboard.
 
 ## 📝 Step 3: Using the Keyboard
 
-1. Open **Notepad** or any text editor
-2. Select font: **ShreeLipi**
-3. From the Keyman tray icon, select:
+1. Open any text editor (Notepad, TextEdit, LibreOffice, etc.)
+2. Set the font to **ShreeLipi**
+3. Select the keyboard from Keyman:
 
    ```
    SHREE OM (UB) INSCRIPT
    ```
 4. Start typing using the **InScript layout**
 
-> ⚠️ This keyboard does **not** include Hindi–English toggling.
-> Use Windows / Keyman keyboard switching if needed.
+> ℹ️ Hindi–English switching is handled by the OS or Keyman keyboard selection.
 
 ---
 
 ## 🗺 Keyboard Layout
 
-Below is the keyboard layout used by this keyboard (InScript standard):
+Below are the keyboard layouts used by this keyboard (standard InScript):
 
-### Normal Key and SHIFT + Key
-![Keyboard Layout](KB_Devanagari_InScript_text_1.svg.png)
+### Normal & Shift Layer
 
-### RIGHT ALT + Key and RIGHT ALT + SHIFT + Key
-![Keyboard Layout](KB_Devanagari_InScript_text_RIGHT%20ALT.png)
+![Keyboard Layout](source/kb_layout_normal.png)
 
+### Right Alt (AltGr) & Right Alt + Shift Layer
+
+![Keyboard Layout](source/kb_layout_right_alt.png)
 
 ---
 
@@ -96,31 +126,29 @@ This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**
 
 * You are free to use, modify, and redistribute this keyboard
 * Any redistributed or modified version **must remain open-source**
-* Source files must be made available when redistributing
+* Source files must be provided when redistributing
 
-See `LICENSE.md` for full license text.
+See `LICENSE.md` for the full license text.
 
 ---
 
 ## ⚠️ Important Legal Notice (ShreeLipi Disclaimer)
 
-* **ShreeLipi font and encoding are proprietary** and owned by their respective copyright holders
+* **ShreeLipi font and encoding are proprietary** and owned by their respective rights holders
 * This project **does NOT distribute ShreeLipi fonts**
 * This keyboard only provides **key mappings** compatible with ShreeLipi encoding
 * Users must obtain and use ShreeLipi fonts **legally**
 
-### If ShreeLipi Organization Raises Any Concern
+### If the ShreeLipi Organization Raises Any Concern
 
-If the ShreeLipi organization or rights holder raises any concern:
-
-* This project **does not claim ownership** of ShreeLipi
+* This project does **not** claim ownership of ShreeLipi
 * The keyboard can be:
 
   * Modified
   * Renamed
   * Or removed upon valid request
 
-Please open an **Issue** in this repository for discussion.
+Please open a **GitHub Issue** for discussion.
 
 ---
 
@@ -150,4 +178,5 @@ This keyboard is intended for:
 * Printing workflows
 * Educational and archival use
 
-For modern workflows, **Unicode Hindi fonts and standard InScript** are recommended.
+For modern workflows, **Unicode Hindi fonts and standard InScript keyboards** are recommended.
+

@@ -12,7 +12,7 @@ store(&Version) "9.0"
 store(&NAME) 'SHREE OM (UB) INSCRIPT'
 store(&BITMAP) 'shree_om_ub_inscript.ico'
 store(&COPYRIGHT) 'Copyright © Umesh Kumar Bedi'
-store(&KEYBOARDVERSION) '1.1'
+store(&KEYBOARDVERSION) '1.2'
 store(&TARGETS) 'windows macosx linux'
 
 c Define Matra stores 
@@ -21,10 +21,22 @@ store(ardh_matra_outs) "»½¿ÀÁÂËÏÜÝÊßãäåæëìñíîôúÍû"  c C
 
 store(r_ardh_matra) "IPnXgh" c खझपदसह
 store(r_ardh_outs) "¼ÃàÐòõ" c प्रद्रस्रह्र
+store(&WINDOWSLANGUAGES) 'x4009 x0439'
 
 begin Unicode > use(main)
 
 group(main) using keys
+
+
+c --------------------------------------
+c Hindi ↔ English Toggle using ` key
+c --------------------------------------
+
+c If Hindi mode is ON, pressing ` turns it OFF
+c dk(99) + [K_BKQUOTE] > nul
+
+c If Hindi mode is OFF, pressing ` turns it ON
+c + [K_BKQUOTE] > dk(99)
 
 
 c -----------------------------

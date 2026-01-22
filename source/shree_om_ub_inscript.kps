@@ -7,7 +7,8 @@
   <Options>
     <ExecuteProgram></ExecuteProgram>
     <ReadMeFile>readme.htm</ReadMeFile>
-    <LicenseFile>..\LICENSE.md</LicenseFile>
+    <!-- UPDATED: Pointing to LICENSE without .md -->
+    <LicenseFile>..\LICENSE</LicenseFile>
     <WelcomeFile>welcome.htm</WelcomeFile>
     <MSIFileName></MSIFileName>
     <MSIOptions></MSIOptions>
@@ -21,7 +22,8 @@
     <Name URL="">shree_om_ub_inscript</Name>
     <Copyright URL="">Copyright © Umesh Kumar Bedi</Copyright>
     <Author URL="">Umesh Kumar Bedi</Author>
-    <Description URL=""></Description>
+    <!-- ADDED a description here -->
+    <Description URL="">An InScript layout keyboard for typing the Hindi language in Unicode.</Description>
     <Version URL=""></Version>
   </Info>
   <Files>
@@ -31,18 +33,7 @@
       <CopyLocation>0</CopyLocation>
       <FileType>.kmx</FileType>
     </File>
-    <File>
-      <Name>..\build\shree_om_ub_inscript.js</Name>
-      <Description></Description>
-      <CopyLocation>0</CopyLocation>
-      <FileType>.js</FileType>
-    </File>
-    <File>
-      <Name>..\build\shree_om_ub_inscript.kvk</Name>
-      <Description></Description>
-      <CopyLocation>0</CopyLocation>
-      <FileType>.kvk</FileType>
-    </File>
+    
     <File>
       <Name>welcome.htm</Name>
       <Description></Description>
@@ -55,12 +46,23 @@
       <CopyLocation>0</CopyLocation>
       <FileType>.htm</FileType>
     </File>
-    <File>
-      <Name>..\LICENSE.md</Name>
-      <Description></Description>
-      <CopyLocation>0</CopyLocation>
-      <FileType>.md</FileType>
+
+      <File>
+      <Name>kb_layout_right_alt.png</Name>
+      <FileType>.png</FileType>
     </File>
+    
+    <File>
+      <Name>kb_layout_normal.png</Name>
+      <FileType>.png</FileType>
+    </File>
+      <!-- UPDATED: Fixed Name and FileType for the extensionless LICENSE file -->
+      <File>
+        <Name>..\LICENSE</Name>
+        <Description></Description>
+        <CopyLocation>0</CopyLocation>
+        <FileType></FileType>
+      </File>
   </Files>
   <Keyboards>
     <Keyboard>
